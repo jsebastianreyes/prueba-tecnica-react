@@ -70,7 +70,7 @@ function App() {
   useEffect(()=>{
     
    setLoading(true)
-   fetch('https://randomuser.me/api/?results=10')
+   fetch('https://randomuser.me/api/?results=20')
       .then(res => res.json())
       .then(data => {
         copyUsers.current = data.results
