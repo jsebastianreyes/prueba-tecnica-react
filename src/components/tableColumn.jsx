@@ -1,23 +1,23 @@
 
-function TableColumn(user, index, color, deleteUser) {
+function TableColumn({user, index, color, deleteUser}) {
     
     console.log(user)
     return (
         <tr className={`userColumn column-${index} ${color ? 'active' : '' }`}>
             <td>
-              {user.user.picture && <img src={user.user.picture.medium} width='70' alt={user.user.name} />}
+              {user.picture && <img src={user.picture.medium} width='70' alt={user.name} />}
             </td>
             <td>
-             {user.user.name.first} 
+             {user.name.first} 
             </td>
             <td>
-            {user.user.name.last}  
+            {user.name.last}  
             </td>
             <td>
-            {user.user.location.country}  
+            {user.location.country}  
             </td>
             <td>
-                <button onClick={()=> deleteUser(user.user.email) }> Borrar </button>
+                <button onClick={()=> deleteUser(user.email) }> Borrar </button>
             </td>
          
         </tr>
